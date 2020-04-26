@@ -9,8 +9,13 @@ fun main(args: Array<String>) {
     bookShelf.appendBook(Book("Singleton"))
 
     val iterator = bookShelf.iterator()
+    val descIterator = bookShelf.descIterator()
+
     while (iterator.hasNext()) {
-        val book = iterator.next() as Book
-        println(book.getName())
+        println(iterator.next().getName())
+    }
+
+    while (descIterator.hasPrevious()) {
+        println(descIterator.previous().getName())
     }
 }
