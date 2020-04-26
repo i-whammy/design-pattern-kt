@@ -1,8 +1,8 @@
 package design.pattern.kt.iterator
 
-class BookShelf(maxSize: Int) : Aggregate<Book> {
+class BookShelf() : Aggregate<Book> {
 
-    private var books: Array<Book> = emptyArray()
+    private var books: MutableList<Book> = mutableListOf()
     private var last: Int = 0
 
     override fun iterator(): Iterator<Book> {
@@ -12,11 +12,7 @@ class BookShelf(maxSize: Int) : Aggregate<Book> {
     fun getBookAt(index: Int): Book = books[index]
     fun getLength(): Int = last
     fun appendBook(book: Book) {
-        this.books[last] = book
+        this.books.add(book)
         this.last++
-    }
-
-    init {
-        this.books = Array(maxSize) { Book("no title") }
     }
 }
