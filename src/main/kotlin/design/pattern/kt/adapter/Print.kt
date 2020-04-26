@@ -1,4 +1,4 @@
-package design.pattern.kt.adaptor
+package design.pattern.kt.adapter
 
 interface Print {
     fun printWeak()

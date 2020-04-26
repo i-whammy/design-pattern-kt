@@ -1,4 +1,4 @@
-package design.pattern.kt.adaptor
+package design.pattern.kt.adapter
 
 class PrintBanner(private val string: String): Print, Banner(string) {
     override fun printWeak() {

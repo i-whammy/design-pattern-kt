@@ -3,7 +3,7 @@ package design.pattern.kt.iterator
 fun main(args: Array<String>) {
     val bookShelf = BookShelf()
     bookShelf.appendBook(Book("Iterator"))
-    bookShelf.appendBook(Book("Adaptor"))
+    bookShelf.appendBook(Book("Adapter"))
     bookShelf.appendBook(Book("Template Method"))
     bookShelf.appendBook(Book("Factory Method"))
     bookShelf.appendBook(Book("Singleton"))

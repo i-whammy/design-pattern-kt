@@ -1,4 +1,4 @@
-package design.pattern.kt.adaptor
+package design.pattern.kt.adapter
 
 class DelegatedPrintBanner(private val banner: Banner): Print {
     override fun printWeak() {

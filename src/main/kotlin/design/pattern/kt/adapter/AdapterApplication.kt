@@ -1,4 +1,4 @@
-package design.pattern.kt.adaptor
+package design.pattern.kt.adapter
 
 import java.io.IOException
 
@@ -12,11 +12,11 @@ fun main (args: Array<String>) {
 
     val f = FileProperties()
     try {
-        f.readFromFile("src/main/resources/adaptor/file.txt")
+        f.readFromFile("src/main/resources/adapter/file.txt")
         f.setValue("year", "2004")
         f.setValue("month", "4")
         f.setValue("day", "21")
-        f.writeToFile("src/main/resources/adaptor/newfile.txt")
+        f.writeToFile("src/main/resources/adapter/newfile.txt")
     } catch (e: IOException) {
         e.printStackTrace()
     }

@@ -1,4 +1,4 @@
-package design.pattern.kt.adaptor
+package design.pattern.kt.adapter
 
 open class Banner(private val string: String) {
     fun showWithParen() {

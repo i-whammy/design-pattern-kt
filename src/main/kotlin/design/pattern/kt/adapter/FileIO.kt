@@ -1,4 +1,4 @@
-package design.pattern.kt.adaptor
+package design.pattern.kt.adapter
 
 interface FileIO {
     fun readFromFile(filename: String)
