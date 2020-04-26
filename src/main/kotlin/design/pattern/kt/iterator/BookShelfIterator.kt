@@ -5,8 +5,10 @@ class BookShelfIterator(private val bookShelf: BookShelf) : Iterator<Book> {
     override fun hasNext(): Boolean = index < bookShelf.getLength()
 
     override fun next(): Book {
-        val book = bookShelf.getBookAt(index)
-        index++
-        return book
+        if (hasNext()) {
+            val book = bookShelf.getBookAt(index)
+            index++
+            return book
+        } else throw NoBooksAvailableException()
     }
 }
