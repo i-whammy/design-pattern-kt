@@ -3,7 +3,7 @@ package design.pattern.kt.builder
 import java.io.FileWriter
 import java.io.PrintWriter
 
-class HTMLBuilder: Builder() {
+class HTMLBuilder: Builder {
     private var filename = ".html"
     private var writer : PrintWriter? = null
 

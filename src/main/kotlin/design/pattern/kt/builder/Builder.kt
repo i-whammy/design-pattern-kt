@@ -1,8 +1,8 @@
 package design.pattern.kt.builder
 
-abstract class Builder {
-    abstract fun makeTitle(title: String)
-    abstract fun makeString(str: String)
-    abstract fun makeItems(items: Array<String>)
-    abstract fun close()
+interface Builder {
+    fun makeTitle(title: String)
+    fun makeString(str: String)
+    fun makeItems(items: Array<String>)
+    fun close()
 }

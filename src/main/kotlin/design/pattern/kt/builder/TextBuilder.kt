@@ -1,6 +1,6 @@
 package design.pattern.kt.builder
 
-class TextBuilder: Builder() {
+class TextBuilder: Builder {
     private val builder = StringBuilder()
     override fun makeTitle(title: String) {
         builder.append("======================\n")
