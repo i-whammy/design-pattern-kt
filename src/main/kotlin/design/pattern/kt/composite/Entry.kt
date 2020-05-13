@@ -1,7 +1,5 @@
 package design.pattern.kt.composite
 
-import java.lang.RuntimeException
-
 abstract class Entry {
     abstract fun getName(): String
     abstract fun getSize(): Int
@@ -19,4 +17,10 @@ abstract class Entry {
     override fun toString(): String {
         return "${getName()} (${getSize()})"
     }
+
+    fun printFullPath() {
+        printFullPath("")
+    }
+
+    abstract fun printFullPath(prefix: String)
 }

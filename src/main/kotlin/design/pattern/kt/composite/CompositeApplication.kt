@@ -25,5 +25,5 @@ fun main() {
     hanako.add(File("memo.tex",300))
     tomura.add(File("game.doc", 400))
     tomura.add(File("junk.mail", 500))
-    root.printList()
+    root.printFullPath()
 }

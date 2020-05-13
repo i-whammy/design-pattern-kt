@@ -24,4 +24,11 @@ class Directory(private val name: String): Entry() {
         directory.add(entry)
         return this
     }
+
+    override fun printFullPath(prefix: String) {
+        val iterator = directory.iterator()
+        while (iterator.hasNext()) {
+            iterator.next().printFullPath("$prefix/$name")
+        }
+    }
 }
