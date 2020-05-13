@@ -1,4 +1,4 @@
-package design.pattern.kt.strategy
+package design.pattern.kt.strategy.rps
 
 fun main() {
     val player1 = Player("Taro", WinningStrategy(314))

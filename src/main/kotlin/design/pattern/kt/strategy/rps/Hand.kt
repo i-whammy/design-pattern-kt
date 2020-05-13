@@ -1,4 +1,4 @@
-package design.pattern.kt.strategy
+package design.pattern.kt.strategy.rps
 
 class Hand(private val handValue: Int) {
     companion object {

@@ -1,4 +1,4 @@
-package design.pattern.kt.strategy
+package design.pattern.kt.strategy.rps
 
 class Player(private val name: String, private val strategy: Strategy) {
     private var wincount = 0

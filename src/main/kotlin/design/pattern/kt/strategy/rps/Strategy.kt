@@ -1,4 +1,4 @@
-package design.pattern.kt.strategy
+package design.pattern.kt.strategy.rps
 
 interface Strategy {
     fun nextHand(): Hand
