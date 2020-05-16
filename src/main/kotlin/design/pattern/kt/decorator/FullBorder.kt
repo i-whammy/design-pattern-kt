@@ -1,7 +1,5 @@
 package design.pattern.kt.decorator
 
-import kotlin.text.StringBuilder
-
 class FullBorder(private val disp: Display): BorderDisplay(disp) {
     override fun getColumns(): Int {
         return disp.getColumns().plus(2)
