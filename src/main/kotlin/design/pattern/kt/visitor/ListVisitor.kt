@@ -8,10 +8,12 @@ class ListVisitor: Visitor() {
 
     override fun visit(directory: Directory) {
         println("$currentDirectory/$directory")
+        val stashedDirectory = currentDirectory
         val iterator = directory.iterator()
+        currentDirectory += "/${directory.getName()}"
         while (iterator.hasNext()) {
             iterator.next().accept(this)
         }
-        currentDirectory += "/${directory.getName()}"
+        currentDirectory = stashedDirectory
     }
 }

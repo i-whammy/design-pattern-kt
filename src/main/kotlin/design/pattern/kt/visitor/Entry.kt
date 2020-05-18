@@ -8,18 +8,10 @@ abstract class Entry: Element {
         throw FileTreatmentException()
     }
 
-    fun printList() {
-        printList("")
-    }
-
     abstract fun printList(prefix: String)
 
     override fun toString(): String {
         return "${getName()} (${getSize()})"
-    }
-
-    fun printFullPath() {
-        printFullPath("")
     }
 
     open fun iterator(): Iterator<Entry> {

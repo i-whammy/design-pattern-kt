@@ -13,6 +13,8 @@ fun main() {
     bin.add(File("latex", 20000))
     root.accept(ListVisitor())
 
+    println("======")
+
     println("Making user entries")
     val yuki = Directory("yuki")
     val hanako = Directory("hanako")
@@ -22,8 +24,20 @@ fun main() {
     usr.add(tomura)
     yuki.add(File("dialy.html", 100))
     yuki.add(File("Composite.java", 200))
-    hanako.add(File("memo.tex",300))
+    hanako.add(File("index.html",300))
     tomura.add(File("game.doc", 400))
     tomura.add(File("junk.mail", 500))
-    usr.accept(ListVisitor())
+    val fileFindVisitor = FileFindVisitor(".html")
+    root.accept(fileFindVisitor)
+    val iterator = fileFindVisitor.getFoundFiles()
+    while (iterator.hasNext()) {
+        println(iterator.next())
+    }
+
+    println("======")
+
+    val elementArrayList = ElementArrayList()
+    elementArrayList.add(root)
+    elementArrayList.add(File("etc.html", 1234))
+    elementArrayList.accept(ListVisitor())
 }
