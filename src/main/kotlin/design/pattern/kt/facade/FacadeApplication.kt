@@ -4,4 +4,5 @@ import design.pattern.kt.facade.pagemaker.PageMaker
 
 fun main() {
     PageMaker.makeWelcomePage("hyuki@hyuki.com", "welcome.html")
+    PageMaker.makeLinkPage("linkpage.html")
 }

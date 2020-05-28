@@ -20,6 +20,10 @@ class HTMLWriter(private val writer: Writer) {
         writer.write("<a href='$href'>$caption</a>")
     }
 
+    fun linkParagraph(href: String, caption: String) {
+        writer.write("<p><a href='$href'>$caption</a></p>\n")
+    }
+
     fun mailTo(mailAddress: String, userName: String) {
         link("$mailAddress: mailAddress", userName)
     }

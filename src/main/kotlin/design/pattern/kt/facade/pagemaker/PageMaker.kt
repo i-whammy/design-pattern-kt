@@ -16,5 +16,14 @@ class PageMaker {
             htmlWriter.close()
             println("$fileName is created for $mailAddress($userName)")
         }
+
+        fun makeLinkPage(fileName: String) {
+            val properties = Database.getProperties("maildata")
+            val htmlWriter = HTMLWriter(FileWriter(fileName))
+            htmlWriter.title("Link page")
+            properties.forEach { htmlWriter.linkParagraph(it.key as String, it.value as String) }
+            htmlWriter.close()
+            println("$fileName is created.")
+        }
     }
 }
