@@ -5,7 +5,7 @@ import java.awt.TextField
 import java.awt.event.TextEvent
 import java.awt.event.TextListener
 
-class ColleagueTextField(text: String, columns: Int): TextField(text, columns), TextListener, Colleage {
+class ColleagueTextField(text: String, columns: Int): TextField(text, columns), TextListener, Colleague {
     private lateinit var mediator: Mediator
 
     override fun textValueChanged(e: TextEvent?) {

@@ -5,7 +5,7 @@ import java.awt.CheckboxGroup
 import java.awt.event.ItemEvent
 import java.awt.event.ItemListener
 
-class ColleagueCheckbox(caption: String, checkboxGroup: CheckboxGroup, state: Boolean): Checkbox(caption, checkboxGroup, state), ItemListener, Colleage {
+class ColleagueCheckbox(caption: String, checkboxGroup: CheckboxGroup, state: Boolean): Checkbox(caption, checkboxGroup, state), ItemListener, Colleague {
 
     private lateinit var mediator: Mediator
 

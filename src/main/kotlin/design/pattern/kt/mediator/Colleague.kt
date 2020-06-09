@@ -1,6 +1,6 @@
 package design.pattern.kt.mediator
 
-interface Colleage {
+interface Colleague {
     fun setMediator(mediator: Mediator)
     fun setColleagueEnabled(enabled: Boolean)
 }

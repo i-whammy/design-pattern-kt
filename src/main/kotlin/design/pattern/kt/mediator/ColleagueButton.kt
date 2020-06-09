@@ -2,7 +2,7 @@ package design.pattern.kt.mediator
 
 import java.awt.Button
 
-class ColleagueButton(caption: String): Button(caption), Colleage {
+class ColleagueButton(caption: String): Button(caption), Colleague {
     private lateinit var mediator: Mediator
 
     override fun setMediator(mediator: Mediator) {
