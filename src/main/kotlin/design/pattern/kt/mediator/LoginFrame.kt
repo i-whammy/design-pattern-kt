@@ -74,11 +74,13 @@ class LoginFrame(title: String): Frame(title), ActionListener, Mediator {
     private fun userPassChanged() {
         if (textUser.text.isNotEmpty()) {
             textPass.setColleagueEnabled(true)
-            buttonOk.setColleagueEnabled(textPass.text.isNotEmpty())
+            buttonOk.setColleagueEnabled(canLogin())
         } else {
             textPass.setColleagueEnabled(false)
             buttonOk.setColleagueEnabled(false)
         }
     }
+
+    private fun canLogin() = textUser.text.length >= 4 && textPass.text.length >= 4
 
 }
