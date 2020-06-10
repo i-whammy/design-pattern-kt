@@ -5,7 +5,6 @@ class GraphObserver: Observer {
         print("GraphObserver:")
         val number = generator.getNumber()
         println("*".repeat(number))
-        println("")
         try {
             Thread.sleep(100)
         } catch (e: InterruptedException) {

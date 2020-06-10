@@ -1,10 +1,12 @@
 package design.pattern.kt.observer
 
 fun main() {
-    val randomNumberGenerator = RandomNumberGenerator()
+    val incrementalGenerator = IncrementalGenerator(10, 50, 5)
     val digitObserver = DigitObserver()
     val graphObserver = GraphObserver()
-    randomNumberGenerator.addObserver(digitObserver)
-    randomNumberGenerator.addObserver(graphObserver)
-    randomNumberGenerator.execute()
+    val hexadecimalObserver = HexadecimalObserver()
+    incrementalGenerator.addObserver(digitObserver)
+    incrementalGenerator.addObserver(graphObserver)
+    incrementalGenerator.addObserver(hexadecimalObserver)
+    incrementalGenerator.execute()
 }
