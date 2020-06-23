@@ -15,4 +15,8 @@ class BigCharFactory private constructor() {
         if (!pool.containsKey(c)) pool[c] = BigChar(c)
         return pool[c]!!
     }
+
+    fun getRawBigChar(c: Char): BigChar {
+        return BigChar(c)
+    }
 }
